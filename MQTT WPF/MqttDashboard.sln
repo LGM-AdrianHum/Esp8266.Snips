@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2027
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MqttDashboard", "MqttDashboard\MqttDashboard.csproj", "{1F532281-A880-4E04-898F-1F31F2425C54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestSend", "TestSend\TestSend.csproj", "{32B49D3D-9A51-4B77-BD97-53D2EA1B9212}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Subscriber", "Subscriber\Subscriber.csproj", "{2D356027-0498-4DC7-9420-A6DC06827E39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F532281-A880-4E04-898F-1F31F2425C54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F532281-A880-4E04-898F-1F31F2425C54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F532281-A880-4E04-898F-1F31F2425C54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F532281-A880-4E04-898F-1F31F2425C54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32B49D3D-9A51-4B77-BD97-53D2EA1B9212}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32B49D3D-9A51-4B77-BD97-53D2EA1B9212}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32B49D3D-9A51-4B77-BD97-53D2EA1B9212}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32B49D3D-9A51-4B77-BD97-53D2EA1B9212}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D356027-0498-4DC7-9420-A6DC06827E39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D356027-0498-4DC7-9420-A6DC06827E39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D356027-0498-4DC7-9420-A6DC06827E39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D356027-0498-4DC7-9420-A6DC06827E39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {83D14DF7-23B1-40C3-94F2-2EC8DD63A930}
+	EndGlobalSection
+EndGlobal

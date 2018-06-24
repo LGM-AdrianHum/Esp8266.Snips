@@ -1,0 +1,46 @@
+﻿<mah:MetroWindow
+    x:Class="MqttDashboard.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:MqttDashboard"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:wpf="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
+    Title="MainWindow"
+    Width="525"
+    Height="350"
+    AllowsTransparency="True"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Window.Background>
+        <SolidColorBrush Opacity="0.5" Color="White" />
+    </Window.Background>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition />
+
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <mah:ToggleSwitch
+            Grid.Row="0"
+            HorizontalAlignment="Left"
+            Checked="ToggleSwitch_OnChecked"
+            Header="MQTT Server State" />
+        <TextBlock x:Name="LastMessage" Grid.Row="1" />
+
+        <wpf:CartesianChart
+            Grid.Row="2"
+            LegendLocation="Right"
+            Series="{Binding SeriesCollection}">
+            <wpf:CartesianChart.AxisY>
+                <wpf:Axis Title="Sales" LabelFormatter="{Binding YFormatter}" />
+            </wpf:CartesianChart.AxisY>
+            <wpf:CartesianChart.AxisX>
+                <wpf:Axis Title="Month" Labels="{Binding Labels}" />
+            </wpf:CartesianChart.AxisX>
+        </wpf:CartesianChart>
+    </Grid>
+</mah:MetroWindow>
