@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/arduino-usage -->
+<html lang="en-US" style="" class="js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths js-ready"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">.turbolinks-progress-bar {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: #0076ff;
+  z-index: 9999;
+  transition: width 300ms ease-out, opacity 150ms 150ms ease-in;
+  transform: translate3d(0, 0, 0);
+}</style>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" media="screen" href="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/application-2a1b884c2237bb3f049c12c2b4439ed3ad8efdb82e45650ef29b4633b1f6b129.css" data-turbolinks-track="reload">
+<script type="text/javascript" src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/308175db61"></script><script src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/nr-1071.min.js.download"></script><script type="text/javascript" async="" src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/ec.js.download"></script><script type="text/javascript" async="" src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/analytics.js.download"></script><script src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/js"></script>
+<script type="text/javascript">
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"308175db61","applicationID":"54271218","transactionName":"cVZXRUFeWghRShtEVlVcSh5AWVkT","queueTime":0,"applicationTime":27,"agent":""}</script>
+<script type="text/javascript">window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var o=t[n]={exports:{}};e[n][0].call(o.exports,function(t){var o=e[n][1][t];return r(o||t)},o,o.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(e,t,n){function r(){}function o(e,t,n){return function(){return i(e,[f.now()].concat(u(arguments)),t?null:this,n),t?void 0:this}}var i=e("handle"),a=e(2),u=e(3),c=e("ee").get("tracer"),f=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],d="api-",l=d+"ixn-";a(p,function(e,t){s[t]=o(d+t,!0,"api")}),s.addPageAction=o(d+"addPageAction",!0),s.setCurrentRouteName=o(d+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,o="function"==typeof t;return i(l+"tracer",[f.now(),e,n],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],n),o)try{return t.apply(this,arguments)}catch(e){throw c.emit("fn-err",[arguments,this,e],n),e}finally{c.emit("fn-end",[f.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=o(l+t)}),newrelic.noticeError=function(e){"string"==typeof e&&(e=new Error(e)),i("err",[e,f.now()])}},{}],2:[function(e,t,n){function r(e,t){var n=[],r="",i=0;for(r in e)o.call(e,r)&&(n[i]=t(r,e[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],3:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,o=n-t||0,i=Array(o<0?0:o);++r<o;)i[r]=e[t+r];return i}t.exports=r},{}],4:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function o(e){function t(e){return e&&e instanceof r?e:e?c(e,u,i):i()}function n(n,r,o,i){if(!d.aborted||i){e&&e(n,r,o);for(var a=t(o),u=m(n),c=u.length,f=0;f<c;f++)u[f].apply(a,r);var p=s[y[n]];return p&&p.push([b,n,r,a]),a}}function l(e,t){v[e]=m(e).concat(t)}function m(e){return v[e]||[]}function w(e){return p[e]=p[e]||o(n)}function g(e,t){f(e,function(e,n){t=t||"feature",y[n]=t,t in s||(s[t]=[])})}var v={},y={},b={on:l,emit:n,get:w,listeners:m,context:t,buffer:g,abort:a,aborted:!1};return b}function i(){return new r}function a(){(s.api||s.feature)&&(d.aborted=!0,s=d.backlog={})}var u="nr@context",c=e("gos"),f=e(2),s={},p={},d=t.exports=o();d.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(o.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return e[t]=r,r}var o=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){o.buffer([e],r),o.emit(e,t,n)}var o=e("ee").get("handle");t.exports=r,r.ee=o},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,i,function(){return o++})}var o=1,i="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!x++){var e=h.info=NREUM.info,t=d.getElementsByTagName("script")[0];if(setTimeout(s.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return s.abort();f(y,function(t,n){e[t]||(e[t]=n)}),c("mark",["onload",a()+h.offset],null,"api");var n=d.createElement("script");n.src="https://"+e.agent,t.parentNode.insertBefore(n,t)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()+h.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(u=Math.max((new Date).getTime(),u))-h.offset}var u=(new Date).getTime(),c=e("handle"),f=e(2),s=e("ee"),p=window,d=p.document,l="addEventListener",m="attachEvent",w=p.XMLHttpRequest,g=w&&w.prototype;NREUM.o={ST:setTimeout,SI:p.setImmediate,CT:clearTimeout,XHR:w,REQ:p.Request,EV:p.Event,PR:p.Promise,MO:p.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},b=w&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),h=t.exports={offset:u,now:a,origin:v,features:{},xhrWrappable:b};e(1),d[l]?(d[l]("DOMContentLoaded",i,!1),p[l]("load",r,!1)):(d[m]("onreadystatechange",o),p[m]("onload",r)),c("mark",["firstbyte",u],null,"api");var x=0,E=e(4)},{}]},{},["loader"]);</script>
+<!--[if lte IE 9]>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+  <![endif]-->
+<script>
+    window.rails_env = 'production';
+  </script>
+<script src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/application-bfc5ff043be5f15c538a8dbf180f668683b897c5d6bdad29992c34b31d3e111f.js.download" data-turbolinks-track="reload"></script>
+<script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "url": "https://learn.adafruit.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://learn.adafruit.com/search?q={search_term}",
+        "query-input": "required name=search_term"
+      }
+    }
+  </script>
+<style id="fit-vids-style">.fluid-width-video-wrapper{width:100%;position:relative;padding:0;}.fluid-width-video-wrapper iframe,.fluid-width-video-wrapper object,.fluid-width-video-wrapper embed {position:absolute;top:0;left:0;width:100%;height:100%;}</style><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"308175db61","applicationID":"54271218","transactionName":"cVZXRUFeWghRShtEVlVcSh5AWVkT","queueTime":0,"applicationTime":23,"agent":""}</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"308175db61","applicationID":"54271218","transactionName":"cVZXRUFeWghRShtEVlVcSh5AWVkT","queueTime":0,"applicationTime":22,"agent":""}</script><link rel="mask-icon" href="https://learn.adafruit.com/assets/adafruit_favicon-d77f206e6cc65b40101b6e5b8987f7c35cb6a283ea73c0adad50c37f7347c61a.svg" color="#000000"><link rel="shortcut icon" type="image/x-icon" href="https://learn.adafruit.com/assets/favicon-0c79bd4bc582e6d4cf3afe417bd1e28120527c09d92c08a6464690c5bf6b85f4.ico"><title>Arduino Usage | Adafruit AM2320 Sensor | Adafruit Learning System</title><meta name="csrf-param" content="authenticity_token"><meta name="csrf-token" content="p243+bvByFAUoOlMGwBv3zbVM/alEJGSjQ4mZSRQGUvG9cyn/NZE4IdlHxvBzkYGElk3TsyepmrLyAprW5ODNA=="><link rel="alternate" type="application/atom+xml" title="ATOM" href="https://learn.adafruit.com/feed"><link rel="alternate" type="application/rss+xml" title="RSS" href="https://learn.adafruit.com/feed.rss"><meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"><meta name="turbolinks-cache-control" content="no-cache"><meta name="guide-title" content="Adafruit AM2320 Sensor"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@adafruit"><meta name="twitter:title" content="Adafruit AM2320 Sensor"><meta name="twitter:description" content="A I2C-friendly version of those popular DHT sensors"><meta name="twitter:image:src" content="https://cdn-learn.adafruit.com/guides/images/000/001/958/medium800/pinout.jpg"><meta name="twitter:domain" content="https://learn.adafruit.com"><link rel="canonical" href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/arduino-usage"><meta http-equiv="X-UA-Compatible" content="IE=Edge"></head>
+<body class="application pages show">
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRPXBQ6"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<div id="outer-wrapper">
+<div id="inner-wrapper">
+<div id="messaging-wrapper" data-load="https://www.adafruit.com/api/multi_message.php"></div>
+<header id="adafruit-header">
+<div id="small-header-content" class="container visible-xs">
+<a id="small-header-menu-button" class="menu-link" href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/arduino-usage#small-header-nav">
+<i class="fa fa-bars"> </i>
+</a>
+<div class="small-header-logo">
+<a href="https://www.adafruit.com/">
+<img id="small-logo" height="50" width="50" alt="Adafruit Logo" title="Adafruit Logo" src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/adafruit_logo_small.png">
+</a> </div>
+<a class="small-header-cart" href="https://www.adafruit.com/shopping_cart">
+<span class="small-cart-count">0</span>
+<i class="fa fa-shopping-cart"></i>
+</a> </div>
+<nav id="small-header-nav" role="navigation" class="visible-xs">
+<div class="block">
+<ul>
+<li>
+<div id="small-search-wrapper">
+<div id="small-search-inner-wrapper">
+<form action="https://learn.adafruit.com/search" method="get">
+<label for="mobile-search" style="display:none;">Search</label>
+<input id="mobile-search" type="text" name="q" placeholder="Search Adafruit">
+<i class="fa fa-search"></i>
+</form>
+</div>
+</div>
+</li>
+<li>
+<a href="https://www.adafruit.com/categories">SHOP</a>
+</li>
+<li>
+<a href="https://blog.adafruit.com/">BLOG</a>
+</li>
+<li>
+<a href="https://learn.adafruit.com/">LEARN</a>
+</li>
+<li>
+<a href="https://forums.adafruit.com/">FORUMS</a>
+</li>
+<li>
+<a href="https://www.youtube.com/adafruit">VIDEOS</a>
+</li>
+<li>
+<a href="https://learn.adafruit.com/users/sign_in">SIGN IN</a>
+</li>
+<li>
+<a class="close-btn" id="small-nav-close-button" href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/arduino-usage#top">CLOSE MENU</a>
+</li>
+</ul>
+</div>
+</nav>
+<div id="header-content" class="container hidden-xs">
+<div id="header-profile">
+<a id="header-cart" href="https://www.adafruit.com/shopping_cart">
+0 Items <i class="fa fa-shopping-cart"></i>
+</a> <div id="account">
+<a href="https://learn.adafruit.com/users/sign_in">Sign In</a>
+</div>
+<div id="search-wrapper">
+<form action="https://learn.adafruit.com/search" method="get">
+<label for="search" style="display:none;">Search</label>
+<input id="search" type="text" name="q" autocomplete="off" data-page="" ,="" data-app-id="W9DMM4OTH0" data-app-key="e613bcda3453b9ef887e2724362f9e57" data-app-index="learn_guides_production" data-app-uri="https://learn.adafruit.com">
+<i class="fa fa-search"></i>
+<input type="submit" style="visibility: hidden; position: fixed;">
+</form>
+</div>
+</div>
+<div id="navigation">
+<a href="https://www.adafruit.com/">
+<img id="logo" width="172" height="60" alt="Adafruit Logo" title="Adafruit Logo" src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/logo_2x.png">
+</a> <nav class="hover-menu">
+<ul>
+<li id="nav-shop" data-load="https://www.adafruit.com/api/flyouts/shop.html"><a href="https://www.adafruit.com/">SHOP</a>
+</li>
+<li id="nav-blog" data-load="https://blog.adafruit.com/adafruit-blog-flyouts"><a href="https://blog.adafruit.com/">BLOG</a>
+</li>
+<li id="nav-learn" data-load="https://learn.adafruit.com/api/hover-menu/flyouts/learn.html"><a href="https://learn.adafruit.com/">LEARN</a>
+</li>
+<li id="nav-forums"><a href="https://forums.adafruit.com/">FORUMS</a>
+</li>
+<li id="nav-forums"><a href="https://www.youtube.com/adafruit">VIDEOS</a>
+</li>
+<li class="visible-lg"><a href="https://www.adabox.com/">ADABOX</a></li>
+</ul>
+</nav>
+</div>
+</div>
+</header>
+<div id="main-content">
+<div id="page-wrapper" class="">
+<div id="content-wrapper" class="container" data-page-id="11708" data-guide-id="1958">
+<div class="row">
+<div class="sidebar-left-wrapper hidden-phone hidden-tablet col-lg-two-and-half col-md-3 col-sm-4 col-xs-12">
+<div class="sidebar-left-content" data-clampedwidth=".sidebar-left-wrapper" style="width: 255px;">
+<nav class="sidebar-left">
+<div class="title-bar">
+<img src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/pinout.jpg" class="img img-responsive">
+<div class="title">
+<h1><a href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/overview">Adafruit AM2320 Sensor</a></h1>
+<span class="tagline"><a href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/overview">A I2C-friendly version of those popular DHT sensors</a></span>
+</div>
+</div>
+<ul class="page-parent nav">
+<li class="parent ">
+<a class="sidebar-parent published" href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/overview">Overview</a>
+</li>
+<li class="parent ">
+<a class="sidebar-parent published" href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/pinouts">Pinouts</a>
+</li>
+<li class="parent active">
+<a class="sidebar-parent published" href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/arduino-usage">Arduino Usage</a>
+</li>
+<li class="parent ">
+<a class="sidebar-parent published" href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/circuitpython-usage">CircuitPython Usage</a>
+<ul class="page-child nav">
+<li class="">
+<a href="https://circuitpython.readthedocs.io/projects/am2320/en/latest/api.html" target="blank" class="published">CircuitPython API</a><i class="fa fa-external-link right"></i>
+</li>
+</ul>
+</li>
+<li class="single-page-spacer"></li>
+<li class="single-page-link"><a href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor?view=all">Single Page</a></li>
+<li><a href="https://cdn-learn.adafruit.com/downloads/pdf/adafruit-am2320-temperature-humidity-i2c-sensor.pdf">Download PDF</a></li>
+</ul>
+</nav>
+<header class="sidebar-meta hidden-xs">
+<h4>Contributors</h4>
+<div><a href="https://learn.adafruit.com/users/adafruit2">lady ada</a></div>
+<div><a href="https://learn.adafruit.com/users/kattni">Kattni Rembor</a></div>
+</header>
+<header class="sidebar-meta hidden-xs">
+<a class="feedback-link" title="Feedback? Corrections?" rel="nofollow" data-remote="true" data-method="get" href="https://learn.adafruit.com/pages/11708/settings_modal">
+Feedback? Corrections?
+</a> </header>
+</div>
+</div>
+<article class="col-lg-nine-and-half col-md-9 col-sm-8 col-xs-12">
+<div id="categories">
+<span class="category ">
+<a href="https://learn.adafruit.com/category/adafruit-products">ADAFRUIT PRODUCTS</a>
+</span>
+<span class="category child-category">
+<a href="https://learn.adafruit.com/category/sensors">SENSORS</a>
+<span class="category-link-spacer">/</span>
+<a href="https://learn.adafruit.com/category/temperature">TEMPERATURE &amp; HUMIDITY</a>
+</span>
+<span class="category child-category">
+<a href="https://learn.adafruit.com/category/microcontrollers">MICROCONTROLLERS</a>
+<span class="category-link-spacer">/</span>
+<a href="https://learn.adafruit.com/category/circuitpython">CIRCUITPYTHON</a>
+</span>
+<span id="guide-favorite">
+<a class="favorites-link category right red" title="" data-toggle="tooltip" data-placement="left" data-remote="true" rel="nofollow" data-method="post" href="https://learn.adafruit.com/guides/1958/favorites.js" data-original-title="Favorite this guide?">
+<i class="fa fa-heart-o"></i>
+</a></span>
+</div>
+<div class="content">
+<div class="page-title-wrapper">
+<h1 class="headline">
+<span id="arduino-usage">Arduino Usage</span>
+</h1>
+<div class="author">by
+<a href="https://learn.adafruit.com/users/adafruit2">
+<span class="name">lady ada</span>
+</a> </div>
+</div>
+<div class="page-content">
+<div class="row-fluid build-text">
+<p>You can easily wire this breakout to any microcontroller, we'll be using an Arduino. For another kind of microcontroller, just make sure it has I2C, then port the code - its pretty simple stuff!</p>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/51624">
+<img class="51624-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/051/624/medium260/adafruit_products_metrowire_bb.png?1520442056 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/624/medium640/adafruit_products_metrowire_bb.png?1520442056 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/624/medium800/adafruit_products_metrowire_bb.png?1520442056 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/624/large1024/adafruit_products_metrowire_bb.png?1520442056 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/adafruit_products_metrowire_bb.png" alt="adafruit_products_metrowire_bb.png">
+<span class="image-expand" style="display: none;"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div id="element-2983635" class="button-element" data-github-release="">
+<a href="https://cdn-learn.adafruit.com/assets/assets/000/051/626/original/metrowire.fzz?1520442072" class="btn btn-large btn-block btn-primary" target="_self" type="button">metrowire fritzing</a>
+</div>
+<div class="row-fluid build-text">
+<ul>
+<li>Connect <strong>Vin</strong> to the power supply, 3-5V is fine. Use the same voltage that the microcontroller logic is based off of. For most Arduinos, that is 5V</li>
+<li>Connect <strong>GND </strong>to common power/data ground</li>
+<li>Connect the <strong>SCL</strong> pin to the I2C clock <strong>SCL</strong> pin on your microcontroller</li>
+<li>Connect the <strong>SDA</strong> pin to the I2C data <strong>SDA </strong>pin on your microcontroller.</li>
+</ul>
+<p>You will also need to add two I2C pullup resistors if your board does not already have them. You can use 2.2K - 10K but we will just use 10K. The resistors go from <strong>VDD</strong> to <strong>SCL</strong> and <strong>SDA</strong> each.</p>
+<p>The AM2320 has a default I2C address of <strong>0x5C&nbsp;</strong>and cannot be changed.</p>
+</div>
+<div class="row-fluid build-text">
+<h1>
+<a href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/arduino-usage#install-adafruit-sensor" class="anchor-link"><span class="fa fa-link"></span></a><span id="install-adafruit-sensor" class="anchor-link-target"></span>Install Adafruit Sensor</h1>
+<p>Open up the Library Manager in the Arduino IDE...</p>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/51627">
+<img class="51627-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/051/627/medium260/adafruit_products_managelib.png?1520442244 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/627/medium640/adafruit_products_managelib.png?1520442244 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/627/medium800/adafruit_products_managelib.png?1520442244 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/627/large1024/adafruit_products_managelib.png?1520442244 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/adafruit_products_managelib.png" alt="adafruit_products_managelib.png">
+<span class="image-expand" style="display: none;"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<p>Search for <strong>Adafruit_Sensor</strong> to locate the Unified Sensor library and <strong>Install</strong> it</p>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/51628">
+<img class="51628-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/051/628/medium260/adafruit_products_adafruitsensor.png?1520442285 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/628/medium640/adafruit_products_adafruitsensor.png?1520442285 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/628/medium800/adafruit_products_adafruitsensor.png?1520442285 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/628/large1024/adafruit_products_adafruitsensor.png?1520442285 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/adafruit_products_adafruitsensor.png" alt="adafruit_products_adafruitsensor.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<h1>
+<a href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/arduino-usage#download-adafruit-am2320" class="anchor-link"><span class="fa fa-link"></span></a><span id="download-adafruit-am2320" class="anchor-link-target"></span>Download Adafruit_AM2320</h1>
+<p>To begin reading sensor data, you will need to <a href="https://github.com/adafruit/Adafruit_AM2320">download Adafruit_AM2320 from our github repository</a>. You can do that by visiting the github repo and manually downloading or, easier, just click this button to download the zip</p>
+</div>
+<div id="element-2983638" class="button-element" data-github-release="">
+<a href="https://github.com/adafruit/Adafruit_AM2320/archive/master.zip" class="btn btn-large btn-block btn-primary" target="_self" type="button">Download Adafruit_AM2320 Library</a>
+</div>
+<div class="row-fluid build-text">
+<p>Rename the uncompressed folder <strong>Adafruit_AM2320 </strong>and check that the <strong>Adafruit_</strong><strong>AM2320</strong> folder contains <strong>Adafruit_AM2320</strong><strong>.</strong><strong>cpp</strong> and <strong>Adafruit_AM2320</strong><strong>.h</strong><br><br>Place the <strong>Adafruit_AM2320</strong> library folder your <strong>arduinosketchfolder/libraries/</strong> folder. <br>You may need to create the <strong>libraries</strong> subfolder if its your first library. Restart the IDE.<br><br>We also have a great tutorial on Arduino library installation at:<br><a title="Link: http://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use" href="http://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use">http://learn.adafruit.com/adafruit-all-about-arduino-libraries-install-use</a></p>
+</div>
+<div class="row-fluid build-text">
+<h1>
+<a href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/arduino-usage#load-demo" class="anchor-link"><span class="fa fa-link"></span></a><span id="load-demo" class="anchor-link-target"></span>Load Demo</h1>
+<p>Open up <strong>File-&gt;Examples-&gt;Adafruit_AM2320</strong><strong>-&gt;am2320_basictest </strong>and upload to your microcontroller wired up to the sensor</p>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/51629">
+<img class="51629-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/051/629/medium260/adafruit_products_basictest.png?1520442452 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/629/medium640/adafruit_products_basictest.png?1520442452 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/629/medium800/adafruit_products_basictest.png?1520442452 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/629/large1024/adafruit_products_basictest.png?1520442452 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/adafruit_products_basictest.png" alt="adafruit_products_basictest.png">
+<span class="image-expand"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<p>Thats it! Now open up the serial terminal window at 9600 speed to begin the test.</p>
+</div>
+<div class="row-fluid build-image">
+<a href="https://learn.adafruit.com/assets/51630">
+<img class="51630-asset img-responsive" srcset="https://cdn-learn.adafruit.com/assets/assets/000/051/630/medium260/adafruit_products_basicout.png?1520442498 260w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/630/medium640/adafruit_products_basicout.png?1520442498 640w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/630/medium800/adafruit_products_basicout.png?1520442498 800w,
+               https://cdn-learn.adafruit.com/assets/assets/000/051/630/large1024/adafruit_products_basicout.png?1520442498 1024w" sizes="(max-width: 768px) 100vw, (max-width: 1024px) 65vw, (max-width: 1365px) 47vw, 750px" src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/adafruit_products_basicout.png" alt="adafruit_products_basicout.png">
+<span class="image-expand" style="display: none;"><i class="fa fa-search-plus"></i></span>
+</a> </div>
+<div class="row-fluid build-text">
+<p>You can try breathing on the sensor to increase the humidity.</p>
+</div>
+<div class="page-navigation">
+<a class="previous-page" href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/pinouts">
+<i class="fa fa-chevron-left"></i>PINOUTS
+</a> <a class="next-page" href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/circuitpython-usage">
+CIRCUITPYTHON USAGE<i class="fa fa-chevron-right"></i>
+</a> <div class="clear"></div>
+</div>
+<span class="page-last-updated">Last updated on Mar 07, 2018</span>
+<span class="page-last-updated">Published on Mar 07, 2018</span>
+</div>
+</div>
+</article>
+<div class="col-lg-two-and-half col-md-3 hidden-sm hidden-xs">
+<header class="sidebar-right">
+<div class="sidebar-right-content">
+<div class="clear"></div>
+</div>
+</header>
+</div>
+</div>
+</div>
+<div class="footer-spacer"></div>
+</div>
+<div class="modal fade" id="notify-modal">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<a href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/arduino-usage#" class="close" data-dismiss="modal">×</a>
+<h5>OUT OF STOCK NOTIFICATION</h5>
+</div>
+<div class="modal-body">
+<p class="notify-modal-form-header"></p>
+<div class="notify-modal-products"></div>
+<form id="notify-modal-form" name="back_in_stock_notification">
+<p class="notify-modal-form-notice"></p>
+<div class="notify-modal-break"></div>
+<div class="form-group">
+<label class="inputLabel" for="name">YOUR NAME</label>
+<input type="text" size="25" maxlength="64" name="name" value="">
+</div>
+<div class="form-group">
+<label class="inputLabel" for="email">YOUR EMAIL</label>
+<input type="email" size="25" maxlength="96" name="email" value="">
+</div>
+<input type="text" name="daigo" style="display:none;">
+<input type="hidden" name="notify_me" value="true">
+</form>
+<div id="notify-modal-success" style="display:none">
+<p>You have been successfully subscribed to the Notification List for this product and will therefore receive an e-mail from us when it is back in stock!</p>
+<p>For security reasons, an e-mail has been sent to you acknowledging your subscription. Please remember that this subscription will not result in you receiving any e-mail from us about anything other than the restocking of this item.</p>
+<p>If, for any reason, you would like to unsubscribe from the Notification List for this product you will find details of how to do so in the e-mail that has just been sent to you!</p>
+</div>
+</div>
+<div class="modal-footer">
+<a href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/arduino-usage#" id="close-notify" style="display: none" data-dismiss="modal" data-target="#notify-modal">CLOSE</a>
+<a href="https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/arduino-usage#" id="submit-notify" rel="nofollow" class="blue-button">NOTIFY ME</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer id="adafruit-footer">
+<div id="footer-content" class="container">
+<div class="row">
+<div class=" col-lg-6 col-md-6 col-sm-4 col-xs-12">
+<nav>
+<ul>
+<li><a href="https://www.adafruit.com/contact_us">CONTACT</a></li>
+<li><a href="https://www.adafruit.com/support">SUPPORT</a>
+</li><li><a href="https://www.adafruit.com/distributors">DISTRIBUTORS</a></li>
+<li><a href="https://www.adafruit.com/educators">EDUCATORS</a></li>
+<li><a href="https://www.adafruit.com/jobs">JOBS</a></li>
+<li><a href="https://www.adafruit.com/faq">FAQ</a></li>
+<li><a href="https://www.adafruit.com/shippinginfo/">SHIPPING &amp; RETURNS</a></li>
+<li><a href="https://www.adafruit.com/terms_of_service/">TERMS OF SERVICE</a></li>
+<li><a href="https://www.adafruit.com/privacy">PRIVACY &amp; LEGAL</a></li>
+<li><a href="https://www.adafruit.com/about">ABOUT US</a></li>
+</ul>
+</nav>
+<div id="footer-copyright">
+<a href="http://nytm.org/made-in-nyc/">ENGINEERED IN NYC</a> <span>Adafruit&nbsp;®</span>
+</div>
+</div>
+<div class="col-lg-6 col-md-6 col-sm-8 hidden-xs">
+<div id="footer-quote" class="">
+"I would rather walk with a friend in the dark, than alone in the light"
+<span class="quote-author">- <a href="https://en.wikipedia.org/wiki/Helen_Keller">Helen Keller</a></span>
+</div>
+</div>
+<div id="footer-seals">
+<img class="img-responsive" src="./Arduino Usage _ Adafruit AM2320 Sensor _ Adafruit Learning System_files/seals_2x.jpg">
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+
+</body></html>
